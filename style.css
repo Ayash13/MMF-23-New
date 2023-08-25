@@ -3614,7 +3614,7 @@ figure {
 }
 
 .nav-links-wrapper {
-    grid-column-gap: 2.78em;
+    grid-column-gap: 0em;
     grid-row-gap: 0px;
     grid-template-rows: auto;
     grid-template-columns: max-content max-content max-content max-content;
@@ -4178,7 +4178,7 @@ figure {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 11.5em;
+    padding-top: 3.5em;
     padding-left: 7.78em;
     padding-right: 7.78em;
     display: flex;
@@ -4196,16 +4196,19 @@ figure {
     height: auto
 }
 
-.more-to-life-wrapper {
+.spotify-wrapper {
     height: 52.78em;
-    background-color: #fff;
+    background-color: #3c7f72;
+    background-image: url('assets/frame-2.svg');
+    background-size: cover;
+    background-position: center;
     border-bottom: 4px solid #000;
     border-left: 4px solid #000;
     border-right: 4px solid #000;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 11.11em;
+    padding-top: 10.11em;
     display: flex;
     position: relative
 }
@@ -4238,6 +4241,9 @@ figure {
 .download-app-wrapper {
     height: 50em;
     background-color: #fff;
+    background-image: url('assets/poster-lomba.jpg');
+    background-size: cover;
+    background-position: center;
     border-left: 4px solid #000;
     border-right: 4px solid #000;
     flex-direction: column;
@@ -4290,14 +4296,19 @@ figure {
     grid-template-columns: 1fr
 }
 
-.cherries-wrapper {
-    background-color: #f8fe83;
+.carousel-wrapper {
+    background-color: #ffffff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2.78em;
+    padding: 0em;
     display: flex;
     position: relative
+}
+
+.carousel-item img {
+    max-height: 350px;
+    /* Default size */
 }
 
 .z-index-2 {
@@ -4317,7 +4328,7 @@ figure {
     text-transform: uppercase;
     font-family: Aribaugrotesk bd, sans-serif;
     font-size: 6.94em;
-    font-weight: 800
+    font-weight: 800;
 }
 
 .xoxo {
@@ -7270,7 +7281,7 @@ figure {
         padding-right: 3em
     }
 
-    .more-to-life-wrapper {
+    .spotify-wrapper {
         height: auto;
         padding-top: 12em;
         padding-bottom: 10em
@@ -7298,7 +7309,7 @@ figure {
         padding-bottom: 3em
     }
 
-    .cherries-wrapper {
+    .carousel-wrapper {
         border-bottom: .28em solid #000;
         border-left: .28em solid #000;
         padding-top: 4em;
@@ -8001,7 +8012,7 @@ figure {
         padding: 80px 16px 160px
     }
 
-    .more-to-life-wrapper {
+    .spotify-wrapper {
         padding: 160px 16px 80px
     }
 
@@ -8583,11 +8594,11 @@ figure {
 
     .members-events-content {
         padding-top: 60px;
-        padding-bottom: 200px
+        padding-bottom: 40px
     }
 
-    .more-to-life-wrapper {
-        padding-top: 140px
+    .spotify-wrapper {
+        padding-top: 90px
     }
 
     .download-app-wrapper {
@@ -8604,8 +8615,15 @@ figure {
         padding-bottom: 20px
     }
 
-    .cherries-wrapper {
-        padding: 32px 16px
+    .carousel-wrapper {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        max-height: 300px;
+    }
+
+    .carousel-item img {
+        max-height: 250px;
+        /* Larger size on desktop */
     }
 
     .the-day-for {
