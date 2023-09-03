@@ -269,7 +269,7 @@ html {
 body {
     min-height: 100%;
     color: #333;
-    background-color: #fff;
+    background-color: rgb(249, 227, 183);
     margin: 0;
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -3563,7 +3563,7 @@ figure {
 }
 
 .bg-colour-pink {
-    background-color: #f1dbdf
+    background-color: rgb(249, 227, 183)
 }
 
 .bg-colour-yellow {
@@ -3609,12 +3609,12 @@ figure {
 }
 
 .thursday-logo-black {
-    width: 11.11em;
+    width: 7.11em;
     height: auto
 }
 
 .nav-links-wrapper {
-    grid-column-gap: 0em;
+    grid-column-gap: 2em;
     grid-row-gap: 0px;
     grid-template-rows: auto;
     grid-template-columns: max-content max-content max-content max-content;
@@ -3697,7 +3697,7 @@ figure {
 }
 
 .button-primary-bg.button-primary-bg-pink {
-    background-color: #f1dbdf
+    background-color: rgb(249, 227, 183)
 }
 
 .button-primary-bg.button-primary-bg-pink.left-margin-adjust {
@@ -3719,7 +3719,7 @@ figure {
 }
 
 .section.footer {
-    height: 26.39em;
+    height: 22.39em;
     background-color: #fff;
     border-top: 4px solid #000
 }
@@ -4546,11 +4546,11 @@ figure {
 }
 
 .footer-text-small {
-    max-width: 13.89em;
+    max-width: 20.89em;
     font-family: Aribaugrotesk rg, sans-serif;
-    font-size: .83em;
+    font-size: .93em;
     font-weight: 500;
-    line-height: 1.5
+    line-height: 2.5
 }
 
 .why-im-here-header {
@@ -4838,7 +4838,7 @@ figure {
 }
 
 .body-afterparty {
-    background-color: #f1dbdf
+    background-color: rgb(249, 227, 183)
 }
 
 .afterparty-content {
@@ -5366,7 +5366,7 @@ figure {
     display: flex
 }
 
-.my-diary-header-content {
+.lomba-header-content {
     height: 19em;
     background-color: #fff;
     border-bottom: 4px solid #000;
@@ -5379,9 +5379,9 @@ figure {
     position: relative
 }
 
-.my-diary-header-visual {
+.lomba-header-visual {
     height: 19em;
-    background-color: #f8fe83;
+    background-color: #a1bbec;
     border-bottom: 4px solid #000;
     border-right: 4px solid #000;
     justify-content: center;
@@ -5452,7 +5452,7 @@ figure {
 .diary-card-wrapper {
     z-index: 1;
     width: 100%;
-    height: 40.83em;
+    height: 55.83em;
     border: 4px solid #000;
     flex-direction: column;
     display: flex;
@@ -5461,7 +5461,7 @@ figure {
 
 .diary-card-image-wrapper {
     width: 100%;
-    height: 18.06em;
+    height: 30.00em;
     border-bottom: 4px solid #000;
     position: relative
 }
@@ -5472,7 +5472,7 @@ figure {
     flex: 1;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1.94em;
+    padding: 2.94em;
     display: flex
 }
 
@@ -5524,7 +5524,10 @@ figure {
 
 .press-header-visual {
     height: 43.06em;
-    background-color: #37b8f0;
+    background-color: #fff;
+    background-image: url('assets/poster-gs.svg');
+    background-size: cover;
+    background-position: center;
     border-bottom: 4px solid #000;
     border-right: 4px solid #000;
     justify-content: center;
@@ -5573,7 +5576,7 @@ figure {
 }
 
 .bg-shape-white {
-    z-index: 0;
+    z-index: -999;
     width: 26em;
     position: relative
 }
@@ -5586,9 +5589,9 @@ figure {
 
 .eye-in-sun {
     z-index: 1;
-    width: 5.28em;
+    width: 4.28em;
     margin-top: 3em;
-    margin-right: 4em;
+    margin-right: 4.5em;
     position: absolute;
     top: 0%;
     bottom: auto;
@@ -6028,7 +6031,7 @@ figure {
 
 .dropdown-link:hover {
     color: #000;
-    background-color: #f1dbdf
+    background-color: rgb(249, 227, 183)
 }
 
 .dropdown-link:active,
@@ -7153,7 +7156,7 @@ figure {
     }
 
     .button-primary-bg.bg-pink {
-        background-color: #f1dbdf
+        background-color: rgb(249, 227, 183)
     }
 
     .section.movember {
@@ -7461,11 +7464,11 @@ figure {
         flex: none
     }
 
-    .my-diary-header-content {
+    .lomba-header-content {
         height: 22em
     }
 
-    .my-diary-header-visual {
+    .lomba-header-visual {
         border-left: .28em solid #000
     }
 
@@ -7624,7 +7627,7 @@ figure {
     }
 
     .hamburger-bg-black.bg-pink {
-        background-color: #f1dbdf
+        background-color: rgb(249, 227, 183)
     }
 
     .mobile-menu-overlay {
@@ -7911,7 +7914,7 @@ figure {
     }
 
     .section.footer {
-        height: auto
+        height: auto;
     }
 
     .container {
@@ -8206,7 +8209,7 @@ figure {
         left: 20px
     }
 
-    .my-diary-header-content {
+    .lomba-header-content {
         height: auto;
         padding: 40px 16px
     }
@@ -8216,11 +8219,11 @@ figure {
     }
 
     .diary-card-image-wrapper {
-        height: 20em
+        height: 30em
     }
 
     .diary-card-content {
-        padding: 16px
+        padding: 30px
     }
 
     .diary-card-wrapper-main {
