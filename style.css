@@ -3613,11 +3613,16 @@ figure {
     height: auto
 }
 
+.mmfxsf-logo-black {
+    width: 13.11em;
+    height: auto
+}
+
 .nav-links-wrapper {
     grid-column-gap: 2em;
     grid-row-gap: 0px;
     grid-template-rows: auto;
-    grid-template-columns: max-content max-content max-content max-content;
+    grid-template-columns: max-content max-content max-content max-content max-content;
     grid-auto-columns: 1fr;
     align-items: center;
     display: grid
@@ -4774,6 +4779,9 @@ figure {
 .contact-us-header {
     height: 35.14em;
     background-color: #fff;
+    background-image: url('assets/tm-1.svg');
+    background-size: cover;
+    background-position: center;
     border-bottom: 4px solid #000;
     border-left: 4px solid #000;
     border-right: 4px solid #000;
@@ -4807,6 +4815,9 @@ figure {
 
 .contact-us-main {
     background-color: #fff;
+    background-image: url('assets/19.svg');
+    background-size: cover;
+    background-position: center;
     border-bottom: 4px solid #000;
     border-left: 4px solid #000;
     border-right: 4px solid #000;
@@ -8691,14 +8702,23 @@ figure {
 
     .contact-us-header {
         padding-left: 16px;
-        padding-right: 16px
+        padding-right: 16px;
+        background-image: url('assets/tm-2.svg');
+        background-size: cover;
+        background-position: center;
     }
 
     .envelope {
-        width: 95%;
-        margin-top: 48px;
+        width: 80%;
+        margin-top: 55px;
         margin-left: auto;
         margin-right: auto
+    }
+
+    .contact-us-main {
+        background-image: url('assets/18.svg');
+        background-size: cover;
+        background-position: center;
     }
 
     .contact-us-main.bottom-margin-80 {
