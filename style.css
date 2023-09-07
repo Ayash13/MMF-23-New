@@ -4012,7 +4012,7 @@ figure {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 11.81em 4.17em 7em;
+    padding: 11.81em 4.17em 10em;
     display: flex;
     position: relative
 }
@@ -7816,6 +7816,11 @@ figure {
 }
 
 @media screen and (max-width:767px) {
+    .iframe-yesplis {
+        width: 97%;
+        height: 87%;
+    }
+
     .mobile-right-margin-16 {
         margin-right: 16px
     }
