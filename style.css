@@ -7282,7 +7282,7 @@ figure {
     }
 
     .schedule-wrapper {
-        display: none
+        border-bottom: .30em solid #000
     }
 
     .events-screen-wrapper {

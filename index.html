@@ -315,12 +315,10 @@
           <a href="lomba-mmfest23.html" class="nav-link-item">Info
             Lomba</a>
           <a href="info-konser.html" class="nav-link-item">Info Konser</a>
-          <a href="linkpool.html"
-              class="nav-link-item menu-link-item">LinkPool</a>
+          <a href="linkpool.html" class="nav-link-item menu-link-item">LinkPool</a>
 
           <div class="button-wrapper right-margin-5">
-            <a href="https://yesplis.com/event/muda-mendunia-festival-2023-1"
-              class="button-primary w-inline-block">
+            <a href="https://yesplis.com/event/muda-mendunia-festival-2023-1" class="button-primary w-inline-block">
               <div class="button-text">Buy Ticket</div>
             </a>
             <div class="button-primary-bg"></div>
@@ -342,8 +340,7 @@
               class="nav-link-item menu-link-item">Home</a><a href="lomba-mmfest23.html"
               class="nav-link-item menu-link-item">Info Lomba</a><a href="info-konser.html"
               class="nav-link-item menu-link-item">Info Konser</a>
-              <a href="linkpool.html"
-              class="nav-link-item menu-link-item">LinkPool</a>
+            <a href="linkpool.html" class="nav-link-item menu-link-item">LinkPool</a>
             <div class="button-wrapper menu-link-button"><a
                 href="https://yesplis.com/event/muda-mendunia-festival-2023-1" class="button-primary w-inline-block">
                 <div class="button-text">Buy Ticket</div>
@@ -738,8 +735,117 @@
                   </div>
                 </div>
                 <div class="schedule-wrapper">
-                  <h2 class="heading-large">Rundownnya Lagi Dibuat Nih 😊<br />Sabar Ya...</h2>
-                  <!--
+                  <div class="countdown-container">
+                    <div style="background-color: rgb(238, 155, 155);" class="countdown-item">
+                      <p>Days</p>
+                      <span id="days">00</span>
+                    </div>
+                    <div style="background-color: rgb(238, 198, 155);" class="countdown-item">
+                      <p>Hours</p>
+                      <span id="hours">00</span>
+                    </div>
+                    <div style="background-color: rgb(149, 208, 143);" class="countdown-item">
+                      <p>Minutes</p>
+                      <span id="minutes">00</span>
+                    </div>
+                    <div style="min-width: 150px; background-color: rgb(155, 191, 238);" class="countdown-item">
+                      <p>Seconds</p>
+                      <span id="seconds">00</span>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <h3 style="align-self: center; font-size: 30px;" class="heading-medium">UNTIL THE DAY</h2>
+                    <style>
+                      .countdown-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 20px;
+                      }
+
+                      .countdown-item {
+                        flex: 1;
+                        margin: 10px;
+                        padding: 20px;
+                        background-color: #ffffff;
+                        border: .30em solid #000;
+                        border-width: 3px;
+
+                        font-size: 24px;
+                        text-align: center;
+                      }
+
+                      .countdown-item p {
+                        font-size: 14px;
+                      }
+
+                      span {
+                        font-weight: bold;
+                        font-size: 36px;
+                      }
+
+                      /* Adjust styles for smaller screens */
+                      @media screen and (max-width: 768px) {
+                        .countdown-container {
+                          flex-direction: row;
+                          flex-wrap: wrap;
+                        }
+
+                        .countdown-item {
+                          width: 32%;
+                          /* 3 items in one row */
+                          margin: 5px;
+                        }
+
+                        .countdown-item:nth-child(4) {
+                          flex-basis: 100%;
+                          /* 1 item in the next row */
+                          margin-top: 20px;
+                        }
+
+                        .countdown-item p {
+                          font-size: 12px;
+                          /* Smaller font for labels */
+                        }
+
+                        span {
+                          font-size: 28px;
+                          /* Smaller font for numbers */
+                        }
+                      }
+                    </style>
+                    <script>
+                      // Set the target date for the countdown (2024-01-01 00:00:00)
+                      const targetDate = new Date('2023-10-06 00:00:00').getTime();
+
+                      // Update the countdown every 1 second
+                      const countdown = setInterval(function () {
+                        const currentDate = new Date().getTime();
+                        const timeRemaining = targetDate - currentDate;
+
+                        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                        document.getElementById('days').textContent = String(days).padStart(2, '0');
+                        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+                        if (timeRemaining <= 0) {
+                          clearInterval(countdown);
+                          document.getElementById('days').textContent = '00';
+                          document.getElementById('hours').textContent = '00';
+                          document.getElementById('minutes').textContent = '00';
+                          document.getElementById('seconds').textContent = '00';
+                        }
+                      }, 1000);
+
+                    </script>
+                    <!--
                     <ul role="list" class="schedule-list w-list-unstyled">
                     <li class="schedule-list-item">
                       <div class="list-flex-space-between">
@@ -806,8 +912,8 @@
         <div class="members-events-wrapper">
           <div class="w-layout-grid main-grid-no-gutter">
             <div id="w-node-_6d70b092-d5d8-cf95-228d-85b8b4318e39-b3e5ec20" class="events-screen-wrapper">
-              <iframe class="iframe-yesplis" width="110%" height="92%" src="https://yesplis.com/event/muda-mendunia-festival-2023-1"
-                frameborder="0"></iframe>
+              <iframe class="iframe-yesplis" width="110%" height="92%"
+                src="https://yesplis.com/event/muda-mendunia-festival-2023-1" frameborder="0"></iframe>
             </div>
             <div id="w-node-_6d70b092-d5d8-cf95-228d-85b8b4318e4b-b3e5ec20" class="members-events-content">
               <div class="text-wrapper bottom-margin-20">
@@ -839,8 +945,8 @@
             border-top: 4px solid #000;
             border-left: 4px solid #000;
             border-right: 4px solid #000;"
-            src="https://open.spotify.com/embed/playlist/3tw0dyQTOZHTXY0vCLyghN?utm_source=generator&theme=0" width="80%"
-            height="500" frameBorder="0" allowfullscreen=""
+            src="https://open.spotify.com/embed/playlist/3tw0dyQTOZHTXY0vCLyghN?utm_source=generator&theme=0"
+            width="80%" height="500" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
@@ -1068,8 +1174,7 @@
   <footer class="section footer">
     <div class="container footer">
       <div class="w-layout-grid footer-grid">
-        <div id="w-node-a57e3960-8479-256b-8b5c-9a3869797f7d-69797f7a"
-          class="grid-wrapper flex-vertical-space-between">
+        <div id="w-node-a57e3960-8479-256b-8b5c-9a3869797f7d-69797f7a" class="grid-wrapper flex-vertical-space-between">
           <div class="wrapper mobile-flex-horizontal"><a href="index.html" aria-current="page"
               class="logo-wrapper bottom-margin-20 w-inline-block w--current"></a>
 
@@ -1080,8 +1185,7 @@
               Dunia"</h1>
           </div>
         </div>
-        <div style="margin-left: 20px;" id="w-node-a57e3960-8479-256b-8b5c-9a3869797f8a-69797f7a"
-          class="grid-wrapper">
+        <div style="margin-left: 20px;" id="w-node-a57e3960-8479-256b-8b5c-9a3869797f8a-69797f7a" class="grid-wrapper">
           <ul role="list" class="footer-list">
             <li class="footer-list-item">
               <div class="footer-list-heading">Menu</div>
