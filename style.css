@@ -3622,7 +3622,7 @@ figure {
     grid-column-gap: 2em;
     grid-row-gap: 0px;
     grid-template-rows: auto;
-    grid-template-columns: max-content max-content max-content max-content max-content;
+    grid-template-columns: max-content max-content max-content max-content max-content max-content;
     grid-auto-columns: 1fr;
     align-items: center;
     display: grid
@@ -3724,7 +3724,7 @@ figure {
 }
 
 .section.footer {
-    height: 22.39em;
+    height: 23em;
     background-color: #fff;
     border-top: 4px solid #000
 }
@@ -5768,15 +5768,17 @@ figure {
 
 .jobs-list-wrapper {
     background-color: #fff;
+    width: 171.41%;
     border-bottom: 4px solid #000;
     border-left: 4px solid #000;
     border-right: 4px solid #000;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-bottom: 2.78em;
-    padding-left: 2.78em;
-    padding-right: 2.78em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     display: flex;
     position: relative
 }
@@ -7581,6 +7583,7 @@ figure {
     }
 
     .jobs-list-wrapper {
+        max-width: 100%;
         padding-left: 3em;
         padding-right: 3em
     }
@@ -8898,6 +8901,7 @@ figure {
     }
 
     .jobs-list-wrapper {
+        max-width: 100%;
         padding-left: 16px;
         padding-right: 16px
     }
