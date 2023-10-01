@@ -90,6 +90,181 @@
 </head>
 
 <body class="body">
+  <!-- SOS Banner -->
+  <div id="cookieBanner" class="fs-cc-banner_component">
+    <div class="fs-cc-banner_container">
+      <div class="fs-cc-banner_text">
+        Haloo!!! kamu ngerasa sakit? atau ngerasa ga baik-baik aja?, yuk laporin ke kami. Kami bakalan menjemput kamu
+        dan
+        kamu bakalan secepatnya mendapat pertolongan 🤗🫂.
+      </div>
+      <div class="fs-cc-banner_buttons-wrapper">
+        <a id="cookiePreferences" href="#" class="fs-cc-banner_text-link display-none">Preferences</a>
+        <div class="button-wrapper auto-width">
+          <a id="cookieAcceptButton" href="#" class="button-primary extra-padding w-inline-block">
+            <div class="button-text">Help Me</div>
+          </a>
+          <div class="button-primary-bg button-primary-bg-pink"></div>
+        </div>
+        <div id="closeCookieBanner" class="fs-cc-banner_close">
+          <div class="fs-cc-banner_close-icon w-embed">
+            <svg fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+              <path
+                d="M9.414 8l4.293-4.293-1.414-1.414L8 6.586 3.707 2.293 2.293 3.707 6.586 8l-4.293 4.293 1.414 1.414L8 9.414l4.293 4.293 1.414-1.414L9.414 8z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <p class="paragraph">Pilih salah satu sesuai kondisi kamu, lalu tolong arahkan strobo ke atas dan
+        setinggi-tingginya ya, biar kami bisa liat kamu</p>
+      <br>
+      <div class="button-wrapper">
+        <button id="sakitButton" class="button-primary w-inline-block">
+          <div class="button-text">Aku sakit</div>
+        </button>
+        <div class="button-primary-bg"></div>
+      </div>
+      <br>
+      <div class="button-wrapper"><a href="assets/Flash/darurat.gif"></a>
+        <button id="daruratButton" class="button-primary w-inline-block">
+          <div class="button-text">Aku ga baik-baik aja</div>
+        </button>
+        <div class="button-primary-bg"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Add click event listener to the "Aku sakit" button
+    sakitButton.addEventListener('click', function () {
+      window.location.href = "./assets/Flash/sakit.gif";
+      sendMessage('Ada orang sakit!!!!');
+    });
+
+    // Add click event listener to the "Aku ga baik-baik aja" button
+    daruratButton.addEventListener('click', function () {
+      window.location.href = "./assets/Flash/darurat.gif";
+      sendMessage('Keadaan darurat!!!!');
+    });
+
+    function sendMessage(messageContent) {
+      // Replace 'your-formcarry-endpoint' with your actual Formcarry endpoint
+      const formcarryEndpoint = 'https://formcarry.com/s/LxVEbStyS';
+
+      // You can send the message here using an AJAX request to Formcarry
+      fetch(formcarryEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: messageContent }), // Use the provided message content
+      })
+        .then(response => {
+          // Handle the response as needed
+          // For example, you can show a confirmation message to the user
+          console.log('Message sent successfully');
+        })
+        .catch(error => {
+          // Handle any errors that occur during the request
+          console.error('Error sending message:', error);
+        });
+    }
+  </script>
+  </div>
+
+  <style>
+    /* Styles for the modal */
+    .modal {
+      display: none;
+      /* Hide the modal by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 100%;
+    }
+
+    .close-button {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    /* Add responsive CSS styles */
+    @media (max-width: 768px) {
+      .modal-content {
+        max-width: 90%;
+      }
+    }
+  </style>
+
+  <!-- JavaScript to manage the SOS banner and modal -->
+  <script>
+    const cookieBanner = document.getElementById('cookieBanner');
+    const closeCookieBanner = document.getElementById('closeCookieBanner');
+    const cookieAcceptButton = document.getElementById('cookieAcceptButton');
+
+    const modal = document.getElementById('myModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Always display the cookie banner on page load
+    cookieBanner.style.display = 'block';
+
+    // Add click event listener to the "Sounds good" button
+    cookieAcceptButton.addEventListener('click', function () {
+      // Hide the banner with animation
+      cookieBanner.style.opacity = '0';
+      cookieBanner.style.transform = 'translateY(100%)';
+
+      // After the animation is complete, set the acceptance flag and hide the banner
+      setTimeout(function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+
+        // Show the modal when "Sounds good" is clicked
+        modal.style.display = 'flex';
+      }, 500); // Adjust this time to match your CSS transition duration
+    });
+
+    // Add click event listener to the "Close" button
+    closeCookieBanner.addEventListener('click', function () {
+      // Hide the banner with animation
+      cookieBanner.style.opacity = '0';
+      cookieBanner.style.transform = 'translateY(100%)';
+
+      // After the animation is complete, hide the banner without setting the acceptance flag
+      setTimeout(function () {
+        cookieBanner.style.display = 'none';
+      }, 500); // Adjust this time to match your CSS transition duration
+    });
+
+    // Add click event listener to close the modal
+    closeModal.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+  </script>
   <!--
     <div class="modal-wrapper">
     <div class="modal--mailerlite">
@@ -1204,7 +1379,7 @@
             <li class="footer-list-item"><a href="guest-star.html" class="footer-links">Guest Star</a></li>
             <li class="footer-list-item"><a href="StudentFair.html" class="footer-links">Student Fair</a></li>
             <li class="footer-list-item"><a href="linkpool.html" class="footer-links">LinkPool</a></li>
-            
+
 
           </ul>
         </div>
@@ -1222,22 +1397,22 @@
                 UKM/LM</a></li>
             <li class="footer-list-item"><a href="http://bit.ly/PendaftaranOrgandaMMFest23"
                 class="footer-links">Pendaftaran Organda</a></li>
-                <br>
-                <div style="text-align: center;" class="w-layout-grid social-icons-wrapper-footer">
-                  <a href="https://www.instagram.com/mmfest23/" target="_blank" class="icon-wrapper w-inline-block"><i
-                      class="fa-brands fa-instagram fa-2xl"></i></a>
-                  <a aria-label="instagram" href="https://www.tiktok.com/@mmfest23" target="_blank"
-                    class="icon-wrapper w-inline-block">
-                    <i class="fa-brands fa-tiktok fa-xl"></i>
-                  </a>
-                  <style>
-                    @media screen and (max-width: 768px) {
-                      .social-icons-wrapper-footer {
-                        margin-bottom: 30px;
-                      }
-                    }
-                  </style>
-                </div>
+            <br>
+            <div style="text-align: center;" class="w-layout-grid social-icons-wrapper-footer">
+              <a href="https://www.instagram.com/mmfest23/" target="_blank" class="icon-wrapper w-inline-block"><i
+                  class="fa-brands fa-instagram fa-2xl"></i></a>
+              <a aria-label="instagram" href="https://www.tiktok.com/@mmfest23" target="_blank"
+                class="icon-wrapper w-inline-block">
+                <i class="fa-brands fa-tiktok fa-xl"></i>
+              </a>
+              <style>
+                @media screen and (max-width: 768px) {
+                  .social-icons-wrapper-footer {
+                    margin-bottom: 30px;
+                  }
+                }
+              </style>
+            </div>
           </ul>
           <style>
             @media screen and (max-width: 768px) {
