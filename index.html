@@ -206,8 +206,13 @@
     const modal = document.getElementById('myModal');
     const closeModal = document.getElementById('closeModal');
 
-    // Always display the cookie banner on page load
-    cookieBanner.style.display = 'block';
+    // Check the screen width to determine if it's a mobile device
+    const isMobile = window.innerWidth <= 768; // Adjust the width threshold as needed
+
+    if (isMobile) {
+      // Display the cookie banner only on mobile devices
+      cookieBanner.style.display = 'block';
+    }
 
     // Add click event listener to the "Sounds good" button
     cookieAcceptButton.addEventListener('click', function () {
@@ -241,6 +246,7 @@
     closeModal.addEventListener('click', function () {
       modal.style.display = 'none';
     });
+
   </script>
   <!--
     <div class="modal-wrapper">
