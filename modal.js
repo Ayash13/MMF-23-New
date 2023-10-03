@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function sendMessage(messageContent) {
         // Replace 'your-formcarry-endpoint' with your actual Formcarry endpoint
-        const formcarryEndpoint = 'https://formcarry.com/s/LxVEbStyS';
+        const formcarryEndpoint = 'https://formcarry.com/s/j7pCRt6VKb';
 
         // You can send the message here using an AJAX request to Formcarry
         fetch(formcarryEndpoint, {
