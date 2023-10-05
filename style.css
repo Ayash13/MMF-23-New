@@ -4122,6 +4122,9 @@ figure {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    background-image: url('assets/tdy-bg.png');
+    background-size: cover;
+    background-position: center;
     padding: 2.78em;
     display: flex
 }
@@ -7284,7 +7287,8 @@ figure {
     }
 
     .schedule-wrapper {
-        border-bottom: .30em solid #000
+        border-bottom: .30em solid #000;
+        height: 340px;
     }
 
     .events-screen-wrapper {
